@@ -48,7 +48,7 @@ MOUNT=$(mktemp -d)
 mount "$DEV"1 $MOUNT
 
 # copy contents
-rsync -avHx / $MOUNT
+rsync -avSHx / $MOUNT
 
 # postprocessing
 rm -f $MOUNT/etc/udev/rules.d/70-persistent-net.rules
